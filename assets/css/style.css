@@ -1,3 +1,9 @@
+/* To make sure that mobile screens do not do automatic text size adjustment
+ * (and use the CSS file strictly) */
+html {
+   -webkit-text-size-adjust: 100%;
+}
+
 /* Body styling */
 body {
    font-size: 1rem;
