@@ -1,11 +1,21 @@
 /* Body styling */
 body {
+   font-size: 1rem;
    font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
    max-width: 900px;
    margin: 40px auto;
    line-height: 1.65;
    color: #222;
    padding: 0 20px;
+}
+
+main {
+   font-size: 1rem;
+}
+
+/* Color of links in the main body everywhere */
+main a {
+   color: #0366d6;
 }
 
 /* Header */
@@ -49,11 +59,6 @@ nav a::after {
 
 nav a:hover::after {
    width: 100%;
-}
-
-/* Color of links in the main body everywhere */
-main a {
-   color: #0366d6;
 }
 
 /* Homepage grid layout */
@@ -275,6 +280,9 @@ ul.bibliography {
 
 /* For smaller screen like mobile phones */
 @media (max-width: 700px) {
+   body {
+      font-size: 1.05rem;
+   }
    nav a {
       font-size: 1.15rem;
    }
@@ -306,7 +314,9 @@ ul.bibliography {
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
-
+   body {
+      font-size: 1.02rem;
+   }
    nav a {
       font-size: 1.1rem;
    }
