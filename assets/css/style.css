@@ -1,0 +1,272 @@
+/* Body styling */
+body {
+   font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+   max-width: 900px;
+   margin: 40px auto;
+   line-height: 1.65;
+   color: #222;
+   padding: 0 20px;
+}
+
+/* Header */
+header h1 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+header a {
+   color: #222;
+   text-decoration: none;
+}
+
+/* Navigation bar */
+nav {
+   margin-bottom: 2rem;
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   font-weight: bold;
+}
+
+nav a {
+   color: #0366d6;
+   text-decoration: none;
+   position: relative;
+   padding-bottom: 0.125rem;
+}
+
+nav a::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 2px;
+   left: 0;
+   bottom: 0;
+   background-color: #0366d6;
+   transition: width 0.3s;
+}
+
+nav a:hover::after {
+   width: 100%;
+}
+
+/* Color of links in the main body everywhere */
+main a {
+   color: #0366d6;
+}
+
+/* Homepage grid layout */
+.home-grid {
+   display: grid;
+   grid-template-columns: 205px 1fr; /* photo column + text column */
+   gap: 20px;
+   align-items: start;
+}
+
+.home-grid img {
+   width: 100%;
+   border-radius: 50%;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+/* Paragraphs and lists inside text column */
+.home-grid div p {
+   margin-bottom: 1rem;
+}
+
+.home-grid div ul, .home-grid div ol {
+   margin-left: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+/* Improve list readability */
+.home-grid div ul li {
+   margin-bottom: 0.5rem;
+}
+
+/* Slightly increase spacing around text */
+.home-grid div {
+   padding-top: 0.3rem;   /* separates text from top of grid */
+}
+
+/* Footer */
+footer {
+   margin-top: 3rem;
+   font-size: 0.9rem;
+   color: #555;
+   border-top: 1px solid #ccc;
+   padding-top: 0.625rem;
+   text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+   .home-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+   }
+
+   .home-grid img {
+      width: 150px;
+      margin-bottom: 1.25rem;
+   }
+}
+
+/* Left column photo block */
+.home-grid .photo-col {
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* center image + text */
+   text-align: center;
+}
+
+.home-grid .photo-col .name-tag-icons {
+   width: 100%; /* match photo column width */
+   margin-top: 0.625rem; /* optional spacing below photo */
+}
+
+.home-grid .photo-col .name-tag-icons p.name {
+   margin: 5px 0;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.home-grid .photo-col .name-tag-icons p.tag {
+   margin: 0.3rem 0;
+   font-size: 0.85rem;
+   color: #555;
+}
+
+/* Icon row */
+.home-grid .photo-col .name-tag-icons .icons {
+   margin: 10px 0;
+   display: flex;
+   gap: 10px;
+   font-size: 0.9rem;
+   justify-content: center;
+}
+
+.home-grid .photo-col .name-tag-icons .icons a {
+   text-decoration: none;
+   color: #0366d6;
+   flex: 0 0 auto;   /* prevent flex-grow/shrink */
+}
+
+.home-grid .photo-col .name-tag-icons .icons img {
+    width: 20px;       /* force fixed width */
+    height: 20px;      /* force fixed height */
+    flex-shrink: 0;    /* prevent shrinking/stretching */
+}
+
+.home-grid .photo-col .name-tag-icons .icons a:hover {
+   text-decoration: underline;
+}
+
+/* For bibliography entries */
+.pub-entry {
+   margin-bottom: 1.0rem;
+   padding-left: 1.0rem;
+   border-left: 3px solid #ddd;
+}
+
+.pub-title {
+   font-weight: 500;
+   line-height: 1.3;
+}
+
+.pub-title a {
+   text-decoration: none;
+}
+
+.pub-authors {
+   font-size: 0.95rem;
+}
+
+.pub-venue {
+   font-size: 0.9rem;
+   color: #555;
+}
+
+.pub-links {
+   margin-top: 0.2rem;
+   font-size: 0.85rem;
+}
+
+.pub-links a {
+   margin-right: 0.6rem;
+}
+
+.pub-cite {
+   display: inline-block;
+   margin-left: 0.6rem;
+}
+
+.pub-cite summary {
+   cursor: pointer;
+   font-size: 0.85rem;
+}
+
+.pub-cite pre {
+   margin-top: 0.4rem;
+   padding: 0.5rem;
+   background: #f7f7f7;
+   font-size: 0.8rem;
+   overflow-x: auto;
+}
+
+.cite-toggle {
+   margin-right: 0.6rem;
+   font-size: 0.85rem;
+}
+
+.cite-block {
+   margin-top: 0.4rem;
+   padding: 0.6rem;
+   background: #f7f7f7;
+   font-size: 0.8rem;
+   overflow-x: auto;
+}
+
+/* jekyll-scholar bibliography container */
+/* This removes extra indent on the left side of the bibliography list
+ol.bibliography,
+ul.bibliography {
+   padding-left: 0;
+   margin-left: 0;
+}
+*/
+
+.bibliography li {
+   list-style: none;
+}
+
+.bibliography li::marker {
+   content: "";
+}
+
+/* Contact page */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-page a {
+    color: #0366d6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-page a:hover {
+    text-decoration: underline;
+}
+
+/* CV frame */
+.cv-frame {
+    width: 100%;
+    height: 85vh;
+    border: none;
+}

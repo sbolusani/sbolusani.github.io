@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Research | Suresh Bolusani</title>
+      <link rel="stylesheet" href="/assets/css/style.css">
+   </head>
+   <body>
+      <header>
+         <h1><a href="/"></a></h1>
+      </header>
+
+      <nav>
+         <a href="/">Home</a>
+         <a href="/research">Research</a>
+         <a href="/publications">Publications</a>
+         <a href="/teaching">Teaching</a>
+         <a href="/cv">CV</a>
+         <a href="/contact">Contact</a>
+      </nav>
+
+      <main>
+         <h2 id="research-overview">Research Overview</h2>
+
+<p>My research focuses on <strong>integer optimization</strong>, with an emphasis on
+<strong>mixed-integer linear optimization (MILP)</strong> and its extensions to <strong>bilevel,
+multilevel, and multistage problems</strong>. I work on both <strong>algorithmic
+development</strong> and <strong>solver implementation</strong>, with an interest in how theoretical
+ideas behave when implemented in optimization software. A primary motivation in
+my work is to understand better—and gradually narrow—the gap between
+optimization theory and computational practice.</p>
+
+<h2 id="mixed-integer-linear-optimization-and-warm-starting">Mixed-Integer Linear Optimization and Warm Starting</h2>
+
+<p>A recurring theme in my work is <strong>warm starting, or reoptimization, of MILPs</strong>.
+Warm starting arises in many contexts: real-world applications where similar
+problems are solved repeatedly with small data changes (such as
+security-constrained unit commitment), iterative algorithms like Benders’ or
+Dantzig–Wolfe decomposition that generate closely related subproblems, and
+scenario-based stochastic optimization where problem instances differ only
+slightly across scenarios.</p>
+
+<p>My work in this area includes implementing solver components within
+branch-and-bound frameworks such as
+<a href="https://github.com/coin-or/SYMPHONY" target="_blank" rel="noopener">SYMPHONY</a>
+and developing tools and <a href="https://github.com/sbolusani/MILP-WS-Lib" target="_blank" rel="noopener">benchmarking
+datasets</a> to study warm-starting behavior in a controlled, reproducible
+manner. Some of these datasets were used in <a href="https://github.com/ambros-gleixner/MIPcc23" target="_blank" rel="noopener">The MIP Computational Competition
+2023</a>, which focused on reoptimization of MILPs.</p>
+
+<h2 id="multilevel-and-multistage-mixed-integer-linear-optimization">Multilevel and Multistage Mixed-Integer Linear Optimization</h2>
+
+<p>The central theme of my Ph.D. work is the study of <strong>parametric valid
+inequalities (PVIs)</strong> for MILPs, particularly inequalities derived from duality
+and the value function of MILPs. These PVIs are applied to multilevel and
+multistage MILPs, with a focus on bilevel and two-stage settings.  Using PVIs, I
+developed an abstract framework that generalizes classical Benders’
+decomposition to these problem classes. This framework yields a convergent
+generalized Benders’ decomposition algorithm capable of handling <strong>generic MILPs
+as subproblems</strong>.</p>
+
+<p>I have also <strong>developed a new open-source solver</strong> that implements this
+generalized Benders’ decomposition algorithm for multilevel and multistage
+problems.  SYMPHONY is used as the subproblem solver, both for its dual-function
+data capabilities and warm-start support. The same PVIs naturally relate to warm
+starting of MILPs, allowing information from related solves to be reused across
+problem instances. A summary of this work is available in <a href="/assets/posters/research-PhD/research.pdf" target="_blank" rel="noopener">this poster</a>.</p>
+
+<h2 id="solver-development-and-software">Solver Development and Software</h2>
+
+<p>A substantial part of my work involves implementing algorithms in open-source
+optimization solvers. I have contributed to
+<a href="https://www.scipopt.org/" target="_blank" rel="noopener">SCIP</a>, SYMPHONY,
+<a href="https://github.com/coin-or/MibS" target="_blank" rel="noopener">MibS</a>, and
+<a href="https://minotaur-solver.github.io/" target="_blank" rel="noopener">MINOTAUR</a>,
+primarily in C and C++, with supporting tools and interfaces in Python, such as
+<a href="https://github.com/scipopt/PySoPlex" target="_blank" rel="noopener">PySoPlex</a>.</p>
+
+<p>My contributions span:</p>
+
+<ul>
+  <li><strong>Solver components</strong>: cutting planes, primal heuristics, and new branching
+strategies</li>
+  <li><strong>Algorithmic prototypes</strong>: new decomposition and warm-starting methods</li>
+  <li><strong>Infrastructure</strong>: testing, benchmarking, and integration pipelines</li>
+</ul>
+
+<h2 id="applications-and-earlier-work">Applications and Earlier Work</h2>
+
+<p>These methods and solvers have been applied to practical problems such as
+security-constrained unit commitment, automated timetabling, and stock layout
+planning. Earlier work also includes branching strategies for convex
+mixed-integer nonlinear optimization developed during my Master’s studies,
+and implemented and evaluated within MINOTAUR.</p>
+
+      </main>
+
+      <footer>
+         <p>&copy; 2025 Suresh Bolusani</p>
+      </footer>
+
+      <script src="/assets/js/publications.js"></script>
+   </body>
+</html>
