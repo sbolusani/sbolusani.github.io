@@ -241,13 +241,12 @@ footer {
 }
 
 /* jekyll-scholar bibliography container */
-/* This removes extra indent on the left side of the bibliography list
+/* This removes extra indent on the left side of the bibliography list */
 ol.bibliography,
 ul.bibliography {
    padding-left: 0;
    margin-left: 0;
 }
-*/
 
 .bibliography li {
    list-style: none;
