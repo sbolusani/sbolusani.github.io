@@ -273,7 +273,7 @@ ul.bibliography {
     border: none;
 }
 
-/* For smaller screen like cell phones */
+/* For smaller screen like mobile phones */
 @media (max-width: 700px) {
    nav a {
       font-size: 1.15rem;
@@ -298,6 +298,33 @@ ul.bibliography {
 
    .contact-page {
       font-size: 1.05rem;
+   }
+
+   .cv-frame {
+      display: none;
+   }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+
+   nav a {
+      font-size: 1.1rem;
+   }
+
+   footer {
+      font-size: 0.95rem;
+   }
+
+   .home-grid .photo-col .name-tag-icons p.name {
+      font-size: 1.6rem;
+   }
+
+   .home-grid .photo-col .name-tag-icons p.tag {
+      font-size: 0.95rem;
+   }
+
+   .contact-page {
+      font-size: 1rem;
    }
 
    .cv-frame {
