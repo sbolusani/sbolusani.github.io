@@ -283,6 +283,9 @@ ul.bibliography {
    body {
       font-size: 1.05rem;
    }
+   main {
+      font-size: 1.05rem;
+   }
    nav a {
       font-size: 1.15rem;
    }
@@ -315,6 +318,9 @@ ul.bibliography {
 
 @media (min-width: 701px) and (max-width: 900px) {
    body {
+      font-size: 1.02rem;
+   }
+   main {
       font-size: 1.02rem;
    }
    nav a {
