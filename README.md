@@ -1,2 +1,1 @@
-# sbolusani.github.io
-Suresh Bolusani's Personal Website!
+# Suresh Bolusani's Personal Website!
